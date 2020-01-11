@@ -13,4 +13,6 @@ export const StyledStoreCardContainer = styled.div`
 		display: flex;
 		flex-direction: row-reverse;
 	}
+	.price-input {
+	}
 `

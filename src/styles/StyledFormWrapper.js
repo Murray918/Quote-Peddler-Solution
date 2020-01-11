@@ -8,4 +8,14 @@ export const StyledFormWrapper = styled.div`
         color:red;
 
 	}
+    .price-author-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    .price-author-wrapper :first-child {
+      width : 99%;
+      margin-right: 10%;
+    }
 `

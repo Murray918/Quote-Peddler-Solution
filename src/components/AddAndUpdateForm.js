@@ -49,21 +49,28 @@ class AddAndUpdateForm extends Component {
 								onChange={this.handleChange}
 							/>
 						</div>
-						<div>
-							<TextField
-								label="Price"
-								type="text"
-								name="price"
-								value={this.state.price}
-								onChange={this.handleChange}
-							/>
-							<TextField
-								label="Author"
-								type="text"
-								name="author"
-								value={this.state.author}
-								onChange={this.handleChange}
-							/>
+						<div className="price-author-wrapper">
+							<div className="author-input">
+								<TextField
+									fullWidth
+									label="Author"
+									type="text"
+									name="author"
+									value={this.state.author}
+									onChange={this.handleChange}
+								/>
+							</div>
+							<div className="price-input">
+								{' '}
+								<TextField
+									fullWidth
+									label="Price"
+									type="text"
+									name="price"
+									value={this.state.price}
+									onChange={this.handleChange}
+								/>
+							</div>
 						</div>
 						<div className="submit-button">
 							<SubmitButton label="Submit" />

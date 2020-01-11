@@ -1,21 +1,54 @@
 import React from 'react'
-import { AppBar, Tabs, Tab } from '@material-ui/core'
+import {
+	AppBar,
+	Typography,
+	IconButton,
+	Badge,
+	Toolbar,
+	Fab
+} from '@material-ui/core'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import HomeIcon from '@material-ui/icons/Home'
+import AddIcon from '@material-ui/icons/Add'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { StyledNavWrapper } from '../styles/StyledNavWrapper'
 
-function Nav({ children, location }) {
+function Nav({ children }) {
 	return (
 		<>
 			<AppBar position="static">
-				<Tabs
-					variant="fullWidth"
-					value={location.pathname}
-					aria-label="nav tabs example"
-				>
-					<Tab label="Store" component={Link} to="/" />
-					<Tab label="Add" component={Link} to="/add" />
-					<Tab label="Cart" value="/settings" component={Link} to="/cart" />
-				</Tabs>
+				<Toolbar>
+					<StyledNavWrapper>
+						<div className="home-wrapper">
+							<IconButton
+								edge="start"
+								component={Link}
+								to="/"
+								color="inherit"
+								aria-label="home"
+							>
+								<HomeIcon />
+							</IconButton>
+							<div className="nav-title">
+								<Typography variant="h6">The Quote Peddler</Typography>
+							</div>
+						</div>
+						<div className="cart-icon-wrapper">
+							<IconButton
+								edge="start"
+								component={Link}
+								to="/cart"
+								color="inherit"
+								aria-label="cart"
+							>
+								<Badge badgeContent={4} color="error">
+									<ShoppingCartIcon />
+								</Badge>
+							</IconButton>
+						</div>
+					</StyledNavWrapper>
+				</Toolbar>
 			</AppBar>
 			{children}
 		</>

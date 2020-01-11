@@ -16,6 +16,6 @@ export const StyledFormWrapper = styled.div`
 
     .price-author-wrapper :first-child {
       width : 99%;
-      margin-right: 10%;
+      margin-left: 10%;
     }
 `

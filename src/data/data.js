@@ -80,3 +80,7 @@ export const philosophers = [
 			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
 	}
 ]
+
+export const cart = []
+
+

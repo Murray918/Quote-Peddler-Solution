@@ -13,6 +13,14 @@ export const StyledStoreCardContainer = styled.div`
 		display: flex;
 		flex-direction: row-reverse;
 	}
-	.price-input {
+
+	.add-button {
+		height: 12vh;
+		width: 12vh;
+		position: fixed;
+		bottom: 2%;
+		right: 8%;
+		z-index: 1;
+		background-color: #14a37f;
 	}
 `

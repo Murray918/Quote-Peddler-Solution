@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 
 const useStyles = makeStyles({
 	card: {
-		maxWidth: 245
+		maxWidth: 345
 	}
 })
 

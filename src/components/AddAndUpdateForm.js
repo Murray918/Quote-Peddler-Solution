@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { TextField, FormControl, Paper, Typography } from '@material-ui/core'
+import StyledPaper from '../styles/StyledFormContainer'
 import SubmitButton from './Button'
 import { StyledFormWrapper } from '../styles/StyledFormWrapper'
 
@@ -24,8 +25,9 @@ class AddAndUpdateForm extends Component {
 	}
 
 	render() {
+		console.log(!!this.props.update)
 		return (
-			<Paper elevation={4}>
+			<StyledPaper elevation={4}>
 				<StyledFormWrapper>
 					<FormControl fullWidth onSubmit={this.handleSubmit}>
 						<Typography variant="h3" component="h2">
@@ -33,6 +35,7 @@ class AddAndUpdateForm extends Component {
 						</Typography>
 						<div>
 							<TextField
+								className="input-field"
 								fullWidth
 								label="quote"
 								multiline
@@ -42,6 +45,7 @@ class AddAndUpdateForm extends Component {
 								onChange={this.handleChange}
 							/>
 							<TextField
+								className="input-field"
 								fullWidth
 								label="image"
 								type="text"
@@ -53,6 +57,7 @@ class AddAndUpdateForm extends Component {
 						<div className="price-author-wrapper">
 							<div className="author-input">
 								<TextField
+									className="input-field"
 									fullWidth
 									label="Author"
 									type="text"
@@ -62,8 +67,8 @@ class AddAndUpdateForm extends Component {
 								/>
 							</div>
 							<div className="price-input">
-							
 								<TextField
+									className="input-field"
 									fullWidth
 									label="Price"
 									type="text"
@@ -78,7 +83,7 @@ class AddAndUpdateForm extends Component {
 						</div>
 					</FormControl>
 				</StyledFormWrapper>
-			</Paper>
+			</StyledPaper>
 		)
 	}
 }

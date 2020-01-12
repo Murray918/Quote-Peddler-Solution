@@ -1,17 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, withRouter } from 'react-router-dom'
+
+// Material UI
+import HomeIcon from '@material-ui/icons/Home'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import {
 	AppBar,
 	Typography,
 	IconButton,
 	Badge,
-	Toolbar,
-	Fab
+	Toolbar
 } from '@material-ui/core'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-import HomeIcon from '@material-ui/icons/Home'
-import AddIcon from '@material-ui/icons/Add'
-import { Link, withRouter } from 'react-router-dom'
-import PropTypes from 'prop-types'
+
+// Styles
 import { StyledNavWrapper } from '../styles/StyledNavWrapper'
 
 function Nav({ children }) {

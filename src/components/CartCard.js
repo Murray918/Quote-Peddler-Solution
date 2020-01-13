@@ -1,17 +1,13 @@
 import React from 'react'
 import { Typography, CardActionArea, CardMedia, Fab } from '@material-ui/core'
 import PropTypes from 'prop-types'
+import { formatter } from '../utils'
 import StyledCartCard from '../styles/StyledCartCard'
 import AddIcon from '@material-ui/icons/Add'
 import RemoveIcon from '@material-ui/icons/Remove'
 
 function CartCard({ author, quote, quantity, image, id, price, addItemToCart, removeItemFromCart }) {
-	console.log(2345987098, quantity)
-	const formatter = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		minimumFractionDigits: 2
-	})
+
 
 	const handleAddClick = event => id => {
 		event.preventDefault()

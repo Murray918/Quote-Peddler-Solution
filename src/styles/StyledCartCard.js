@@ -37,15 +37,15 @@ const CartCartStyles = styled(Card)`
 		width: 100%;
 		flex-grow: 2;
         padding-bottom: 1vh;
-        padding-left: 1vh
+        padding-left: 2vh
     }
     
     .add-button {
-        background-color: green;
+        background-color: #14a37f;
     }
 
     .remove-button {
-        background-color: red;
+        background-color: #EF5350;
     }
     
 	.media-image-wrapper {
@@ -55,15 +55,15 @@ const CartCartStyles = styled(Card)`
     }
     
     .card-action-button {
-        height: .5vh;
-        width:  3vh;
-        margin-bottom: 1vh;
+        height:  10%;
+        width:  65%;
+        margin-bottom: 3vh;
+        
     }
     .card-action-icon {
-        height: 1vh;
-        width: 1vh;
+        height: 60%
+        width: 80%;
     }
-
 `
 
 export default function StyledCartCart({ children, ...props }) {

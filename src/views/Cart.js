@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Typography } from '@material-ui/core'
+import {formatter, getTotalCartPrice } from '../utils'
 import CartCard from '../components/CartCard'
 import PropTypes from 'prop-types'
 
 class Cart extends Component {
-	state = {
-		total: 0
-	}
 
 	render() {
+
+		//get the price total
+		const totalPrice = formatter.format(getTotalCartPrice(this.props.cart))
+
 		const cartCards = this.props.cart.map(
 			({ image, quote, author, price, id, quantity }) => {
 				console.log("ak;sdjfa;dslkfaj", quantity)
@@ -29,7 +31,7 @@ class Cart extends Component {
 		return (
 			<>
 				{cartCards}
-				<Typography>Total: {this.state.total}</Typography>
+				<Typography>Total: {totalPrice}</Typography>
 			</>
 		)
 	}

@@ -1,27 +1,20 @@
 import React from 'react'
 import { Typography, CardActionArea, CardMedia, Fab } from '@material-ui/core'
 import PropTypes from 'prop-types'
+import { formatter } from '../utils'
 import StyledCartCard from '../styles/StyledCartCard'
 import AddIcon from '@material-ui/icons/Add'
 import RemoveIcon from '@material-ui/icons/Remove'
 
 function CartCard({ author, quote, quantity, image, id, price, addItemToCart, removeItemFromCart }) {
-	console.log(2345987098, quantity)
-	const formatter = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		minimumFractionDigits: 2
-	})
 
 	const handleAddClick = event => id => {
 		event.preventDefault()
-		console.log('clicked add')
 		addItemToCart(id)
 	}
 
 	const handleRemoveClick = event => id => {
 		event.preventDefault()
-		console.log('clicked remove')
 		removeItemFromCart(id)
 	}
 
@@ -50,6 +43,7 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 				</Typography>
 				<div className="card-action-area">
 					<Fab
+						size='small'
 						aria-label="add"
 						onClick={event => handleAddClick(event)(id)}
 						className="add-button card-action-button"
@@ -58,6 +52,7 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 					</Fab>
 					<Fab
 						aria-label="add"
+						size="small"
 						onClick={event => handleRemoveClick(event)(id)}
 						className="remove-button card-action-button"
 					>

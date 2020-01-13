@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { TextField, FormControl, Paper } from '@material-ui/core'
+import { TextField, FormControl, Paper, Typography } from '@material-ui/core'
+import StyledPaper from '../styles/StyledFormContainer'
 import SubmitButton from './Button'
 import { StyledFormWrapper } from '../styles/StyledFormWrapper'
 
@@ -24,14 +25,17 @@ class AddAndUpdateForm extends Component {
 	}
 
 	render() {
+		console.log(!!this.props.update)
 		return (
-			<Paper elevation={4}>
+			<StyledPaper elevation={4}>
 				<StyledFormWrapper>
 					<FormControl fullWidth onSubmit={this.handleSubmit}>
-						<h1>update me</h1>
-
+						<Typography variant="h3" component="h2">
+							Add Quote
+						</Typography>
 						<div>
 							<TextField
+								className="input-field"
 								fullWidth
 								label="quote"
 								multiline
@@ -41,6 +45,7 @@ class AddAndUpdateForm extends Component {
 								onChange={this.handleChange}
 							/>
 							<TextField
+								className="input-field"
 								fullWidth
 								label="image"
 								type="text"
@@ -49,28 +54,36 @@ class AddAndUpdateForm extends Component {
 								onChange={this.handleChange}
 							/>
 						</div>
-						<div>
-							<TextField
-								label="Price"
-								type="text"
-								name="price"
-								value={this.state.price}
-								onChange={this.handleChange}
-							/>
-							<TextField
-								label="Author"
-								type="text"
-								name="author"
-								value={this.state.author}
-								onChange={this.handleChange}
-							/>
+						<div className="price-author-wrapper">
+							<div className="author-input">
+								<TextField
+									className="input-field"
+									fullWidth
+									label="Author"
+									type="text"
+									name="author"
+									value={this.state.author}
+									onChange={this.handleChange}
+								/>
+							</div>
+							<div className="price-input">
+								<TextField
+									className="input-field"
+									fullWidth
+									label="Price"
+									type="text"
+									name="price"
+									value={this.state.price}
+									onChange={this.handleChange}
+								/>
+							</div>
 						</div>
 						<div className="submit-button">
 							<SubmitButton label="Submit" />
 						</div>
 					</FormControl>
 				</StyledFormWrapper>
-			</Paper>
+			</StyledPaper>
 		)
 	}
 }

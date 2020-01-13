@@ -11,12 +11,17 @@ import PropTypes from 'prop-types'
 
 const useStyles = makeStyles({
 	card: {
-		maxWidth: 245
+		maxWidth: 345
 	}
 })
 
-export default function StoreCard({ id, name, image, quote }) {
+export default function StoreCard({ id, name, image, quote, price, quantity, addItemToCart }) {
 	const classes = useStyles()
+
+	const handleAddClick = event => id => {
+		event.preventDefault()
+		addItemToCart(id)
+	}
 	return (
 		<div className="store-card">
 			<Card className={classes.card}>
@@ -37,7 +42,7 @@ export default function StoreCard({ id, name, image, quote }) {
 						</Typography>
 					</CardContent>
 				</CardActionArea>
-				<CardActions className="card-action-container">
+				<CardActions onClick={event => handleAddClick(event)(id)} className="card-action-container">
 					<Button className="cart-button" size="small" color="primary">
 						Add To Cart
 					</Button>

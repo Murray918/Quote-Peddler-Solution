@@ -1,6 +1,7 @@
-export const philosophers = [
+export const store = [
 	{
 		id: 1,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -23,7 +24,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 3,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -32,7 +34,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 4,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -41,7 +44,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 5,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -50,7 +54,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 6,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -59,7 +64,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 7,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -68,7 +74,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 8,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -77,7 +84,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 9,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
@@ -86,7 +94,8 @@ export const philosophers = [
 		price: 5
 	},
 	{
-		id: 1,
+		id: 10,
+		quantity: 1,
 		name: 'plato',
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',

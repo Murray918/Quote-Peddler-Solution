@@ -5,12 +5,26 @@ import StyledCartCard from '../styles/StyledCartCard'
 import AddIcon from '@material-ui/icons/Add'
 import RemoveIcon from '@material-ui/icons/Remove'
 
-function CartCard({ author, quote, quantity, image, id, price }) {
+function CartCard({ author, quote, quantity, image, id, price, addItemToCart, removeItemFromCart }) {
+	console.log(2345987098, quantity)
 	const formatter = new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'USD',
 		minimumFractionDigits: 2
 	})
+
+	const handleAddClick = event => id => {
+		event.preventDefault()
+		console.log('clicked add')
+		addItemToCart(id)
+	}
+
+	const handleRemoveClick = event => id => {
+		event.preventDefault()
+		console.log('clicked remove')
+		removeItemFromCart(id)
+	}
+
 	return (
 		<StyledCartCard>
 			<div className="media-image-wrapper">
@@ -35,10 +49,18 @@ function CartCard({ author, quote, quantity, image, id, price }) {
 					Qty: {quantity}
 				</Typography>
 				<div className="card-action-area">
-					<Fab aria-label="add" className="add-button card-action-button">
+					<Fab
+						aria-label="add"
+						onClick={event => handleAddClick(event)(id)}
+						className="add-button card-action-button"
+					>
 						<AddIcon className="card-action-icon" />
 					</Fab>
-					<Fab aria-label="add" className="remove-button card-action-button">
+					<Fab
+						aria-label="add"
+						onClick={event => handleRemoveClick(event)(id)}
+						className="remove-button card-action-button"
+					>
 						<RemoveIcon className="card-action-icon" />
 					</Fab>
 				</div>
@@ -53,5 +75,7 @@ CartCard.propTypes = {
 	quote: PropTypes.string.isRequired,
 	quantity: PropTypes.number.isRequired,
 	image: PropTypes.string.isRequired,
-	id: PropTypes.number.isRequired
+	id: PropTypes.number.isRequired,
+	addItemToCart: PropTypes.func.isRequired,
+	removeItemFromCart: PropTypes.func.isRequired
 }

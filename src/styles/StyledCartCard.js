@@ -41,11 +41,11 @@ const CartCartStyles = styled(Card)`
     }
     
     .add-button {
-        background-color: green;
+        background-color: #14a37f;
     }
 
     .remove-button {
-        background-color: red;
+        background-color: #EF5350;
     }
     
 	.media-image-wrapper {
@@ -56,7 +56,7 @@ const CartCartStyles = styled(Card)`
     
     .card-action-button {
         height:  10%;
-        width:  60%;
+        width:  65%;
         margin-bottom: 3vh;
         
     }

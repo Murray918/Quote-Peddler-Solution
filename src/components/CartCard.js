@@ -43,6 +43,7 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 				</Typography>
 				<div className="card-action-area">
 					<Fab
+						size='small'
 						aria-label="add"
 						onClick={event => handleAddClick(event)(id)}
 						className="add-button card-action-button"
@@ -51,6 +52,7 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 					</Fab>
 					<Fab
 						aria-label="add"
+						size="small"
 						onClick={event => handleRemoveClick(event)(id)}
 						className="remove-button card-action-button"
 					>

@@ -8,16 +8,13 @@ import RemoveIcon from '@material-ui/icons/Remove'
 
 function CartCard({ author, quote, quantity, image, id, price, addItemToCart, removeItemFromCart }) {
 
-
 	const handleAddClick = event => id => {
 		event.preventDefault()
-		console.log('clicked add')
 		addItemToCart(id)
 	}
 
 	const handleRemoveClick = event => id => {
 		event.preventDefault()
-		console.log('clicked remove')
 		removeItemFromCart(id)
 	}
 

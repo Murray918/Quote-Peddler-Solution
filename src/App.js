@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import { getTotalItemsInCart } from './utils'
 import { Container } from '@material-ui/core'
 import { cart, store } from './data'
 import Nav from './components/Nav'
@@ -40,14 +41,14 @@ export default class App extends Component {
 			//make a new cart without the item
 			const cartToUpdate = this.state.cartData.filter(item => item.id !== id)
 			//construct a new cart with the the item on top
-			newCart = [{...newCartItem}, ...cartToUpdate]
+			newCart = [{ ...newCartItem }, ...cartToUpdate]
 		} else {
 			//get the item from the storeData
 			newCartItem = this.state.storeData.find(item => item.id === id)
 			//initialize the new cartItem quantity with 1
 			newCartItem.quantity = 1
 			// then just put it on top of the cart
-			newCart = [{...newCartItem}, ...this.state.cartData]
+			newCart = [{ ...newCartItem }, ...this.state.cartData]
 		}
 
 		//set up newStore copy
@@ -56,16 +57,18 @@ export default class App extends Component {
 		const indexOfStoreItem = tempStore.map(item => item.id).indexOf(id)
 		//decrement that item
 		tempStore[indexOfStoreItem].quantity--
-		
+
 		//if there are not any more storeItems
 		if (tempStore[indexOfStoreItem].quantity <= 0) {
 			//get rid of the store item
 			newStore = tempStore.filter(item => item.id !== id)
 		} else {
-			//remove the item from the old store and put temp in 
-			newStore = [tempStore[indexOfStoreItem], ...tempStore.filter(item => item.id !== id)]
+			//remove the item from the old store and put temp in
+			newStore = [
+				tempStore[indexOfStoreItem],
+				...tempStore.filter(item => item.id !== id)
+			]
 		}
-
 		// then set our state
 		this.setState({
 			storeData: newStore,
@@ -115,10 +118,12 @@ export default class App extends Component {
 	}
 
 	render() {
+		const cartBadgeTotal = getTotalItemsInCart(this.state.cartData)
+
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Nav>
+					<Nav cartBadgeTotal={cartBadgeTotal}>
 						<Container>
 							<main>
 								<Route

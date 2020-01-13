@@ -16,7 +16,7 @@ import {
 // Styles
 import { StyledNavWrapper } from '../styles/StyledNavWrapper'
 
-function Nav({ children }) {
+function Nav({ children, cartBadgeTotal }) {
 	return (
 		<>
 			<AppBar position="static">
@@ -44,7 +44,7 @@ function Nav({ children }) {
 								color="inherit"
 								aria-label="cart"
 							>
-								<Badge badgeContent={4} color="error">
+								<Badge badgeContent={cartBadgeTotal} color="error">
 									<ShoppingCartIcon />
 								</Badge>
 							</IconButton>

@@ -5,7 +5,22 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
+	},
+	{
+		id: 2,
+		author: 'Allen Ginsberg',
+		quote: `
+		“Strange now to think of you, gone without corsets & eyes, while I walk on
+		the sunny pavement of Greenwich Village.
+		downtown Manhattan, clear winter noon, and I've been up all night, talking,
+		talking, reading the Kaddish aloud, listening to Ray Charles blues
+		shout blind on the phonograph” `,
+		quantity: 4,
+		image:
+			'https://longreadsblog.files.wordpress.com/2015/03/allen_ginsberg_675-2.jpg?w=1680',
+		price: 5
 	},
 	{
 		id: 1,
@@ -13,7 +28,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -21,7 +37,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -29,7 +46,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -37,7 +55,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -45,7 +64,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -53,7 +73,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -61,7 +82,8 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	},
 	{
 		id: 1,
@@ -69,18 +91,23 @@ export const philosophers = [
 		image:
 			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
 		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
-	},
-	{
-		id: 1,
-		name: 'plato',
-		image:
-			'https://i0.wp.com/merionwest.com/wp-content/uploads/plato.jpg?resize=960%2C389&ssl=1',
-		quote:
-			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.'
+			'Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.',
+		price: 5
 	}
 ]
 
-export const cart = []
+export const cart = [{
+	id: 2,
+	author: 'Allen Ginsberg',
+	quote: `
+	“Strange now to think of you, gone without corsets & eyes, while I walk on
+	the sunny pavement of Greenwich Village.
+	downtown Manhattan, clear winter noon, and I've been up all night, talking,
+	talking, reading the Kaddish aloud, listening to Ray Charles blues
+	shout blind on the phonograph” `,
+	quantity: 4,
+	image: 'https://longreadsblog.files.wordpress.com/2015/03/allen_ginsberg_675-2.jpg?w=1680',
+	price: 5
+}]
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import { Container } from '@material-ui/core'
-import { cart, store } from './data/data'
+import { cart, store } from './data'
 import Nav from './components/Nav'
 import Store from './views/Store'
 import AddAndUpdate from './views/AddAndUpdate'

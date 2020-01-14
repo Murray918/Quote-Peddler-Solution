@@ -1,3 +1,15 @@
+## Quote Peddler is a simple E-commerce React app that allows user to create quotes by author, image of the author, quantity, and price. 
+
+
+This application is currently decoupled with an express api 
+https://github.com/flawgical/quotes-api
+
+
+
+
+
+----------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

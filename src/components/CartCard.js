@@ -6,8 +6,16 @@ import StyledCartCard from '../styles/StyledCartCard'
 import AddIcon from '@material-ui/icons/Add'
 import RemoveIcon from '@material-ui/icons/Remove'
 
-function CartCard({ author, quote, quantity, image, id, price, addItemToCart, removeItemFromCart }) {
-
+function CartCard({
+	author,
+	quote,
+	quantity,
+	image,
+	id,
+	price,
+	addItemToCart,
+	removeItemFromCart
+}) {
 	const handleAddClick = event => id => {
 		event.preventDefault()
 		addItemToCart(id)
@@ -20,7 +28,7 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 
 	return (
 		<StyledCartCard>
-			<div className="media-image-wrapper">
+			<div className="media-image-container">
 				<CardMedia
 					className="media-image"
 					component="img"
@@ -30,20 +38,24 @@ function CartCard({ author, quote, quantity, image, id, price, addItemToCart, re
 					title="Contemplative Reptile"
 				/>
 			</div>
-			<div className="card-info-area">
-				<Typography variant="h6">{author}</Typography>
-				<Typography variant="h6" className="truncate">
-					{quote}
-				</Typography>
-				<Typography>Price: {formatter.format(price)}</Typography>
-			</div>
-			<div className="card-action-area-wrapper">
-				<Typography variant="p" className="card-quantity">
-					Qty: {quantity}
-				</Typography>
-				<div className="card-action-area">
+			<div className="info-container">
+				<div className="info-flex-top">
+					<Typography variant="h6">{author}</Typography>
+					<Typography variant="h6" >
+						Qty: {quantity}
+					</Typography>
+				</div>
+
+				<div className="info-flex-middle">
+					<Typography variant="h6" className="truncate">
+						{quote}
+					</Typography>
+					<Typography>Price: {formatter.format(price)}</Typography>
+				
+				</div>
+				<div className="info-flex-bottom">
 					<Fab
-						size='small'
+						size="small"
 						aria-label="add"
 						onClick={event => handleAddClick(event)(id)}
 						className="add-button card-action-button"

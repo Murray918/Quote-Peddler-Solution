@@ -61,7 +61,7 @@ const CartCartStyles = styled(Card)`
         
     }
     .card-action-icon {
-        height: 60%
+        height: 60%;
         width: 80%;
     }
 `

@@ -9,17 +9,26 @@ import AddAndUpdate from './views/AddAndUpdate'
 import Cart from './views/Cart'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import { getAllStoreQuotes, getCartItems } from './services'
+
 export default class App extends Component {
 	state = {
 		storeData: [],
 		cartData: []
 	}
 
-	componentDidMount() {
-		this.setState({
-			storeData: store,
-			cartData: cart
-		})
+	async componentDidMount() {
+		try {
+			const store = await getAllStoreQuotes()
+			console.log(store)
+			const cart = await getCartItems()
+			this.setState({
+				storeData: store,
+				cartData: cart
+			})
+		} catch (error) {
+			console.error(error)
+		}
 	}
 
 	addItemToCart = id => {
@@ -119,7 +128,6 @@ export default class App extends Component {
 
 	render() {
 		const cartBadgeTotal = getTotalItemsInCart(this.state.cartData)
-
 		return (
 			<BrowserRouter>
 				<Switch>
